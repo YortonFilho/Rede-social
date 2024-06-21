@@ -10,8 +10,8 @@ const posts = [
     id: 1,
     author: {
       avatarUrl: 'https://github.com/diego3g.png',
-      name: 'Diego Fernandes',
-      role: 'CTO @rocketseat',
+      name: 'Guilherme Novask',
+      role: 'Desenvolvedor Mobile',
     },
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋' },
@@ -24,11 +24,10 @@ const posts = [
     id: 2,
     author: {
       avatarUrl: 'https://github.com/ArturAbreuDev.png',
-      name: 'Mayke Brito',
-      role: 'Educator @rocketseat',
+      name: 'Artur Damaceno',
+      role: 'Web Developer',
     },
     content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei de descobrir um site para estudar JavaScript' },
       { type: 'link', content: 'www.JavaScript.com.br' },
     ],
@@ -49,6 +48,7 @@ export function App() {
           {posts.map(post => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
